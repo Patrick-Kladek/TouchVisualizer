@@ -10,10 +10,11 @@ final public class Visualizer: NSObject {
     
     // MARK: - Public Variables
     static public let sharedInstance = Visualizer()
-    fileprivate var enabled = false
-    fileprivate var config: Configuration!
-    fileprivate var touchViews = [TouchView]()
-    fileprivate var previousLog = ""
+    private var enabled = false
+    private var config: Configuration!
+    private var touchViews = [TouchView]()
+    private var previousLog = ""
+    private var window: UIWindow!
     
     // MARK: - Object life cycle
     private override init() {
@@ -63,6 +64,7 @@ extension Visualizer {
             Logger.visualiser.info("Visualizer start...")
 		}
         let instance = sharedInstance
+        instance.window = window
         instance.enabled = true
         instance.config = config
 
@@ -134,7 +136,7 @@ extension Visualizer {
             return
         }
 
-        var topWindow = UIApplication.shared.keyWindow!
+        var topWindow = self.window!
         for window in UIApplication.shared.windows {
             if window.isHidden == false && window.windowLevel > topWindow.windowLevel {
                 topWindow = window
