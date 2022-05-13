@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import os.log
 
 final public class Visualizer: NSObject {
     
@@ -59,7 +60,7 @@ extension Visualizer {
     
     public class func start(_ config: Configuration = Configuration(), in window: UIWindow) {
 		if config.showsLog {
-			print("Visualizer start...")
+            Logger.visualiser.info("Visualizer start...")
 		}
         let instance = sharedInstance
         instance.enabled = true
@@ -73,7 +74,7 @@ extension Visualizer {
             }
         }
 		if config.showsLog {
-			print("started !")
+            Logger.visualiser.info("Started!")
 		}
     }
     
@@ -177,7 +178,7 @@ extension Visualizer {
 extension Visualizer {
     public func warnIfSimulator() {
         #if targetEnvironment(simulator)
-            print("[TouchVisualizer] Warning: TouchRadius doesn't work on the simulator because it is not possible to read touch radius on it.", terminator: "")
+            Logger.visualiser.warning("Warning: TouchRadius doesn't work on the simulator because it is not possible to read touch radius on it.")
         #endif
     }
     
@@ -237,4 +238,12 @@ extension Visualizer {
         previousLog = log
         print(log, terminator: "")
     }
+}
+
+private extension Logger {
+
+    private static var subsystem = Bundle(for: Visualizer.self).bundleIdentifier!
+
+    /// Logs the view cycles like viewDidLoad.
+    static let visualiser = Logger(subsystem: subsystem, category: "Visualiser")
 }
