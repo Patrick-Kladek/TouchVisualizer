@@ -90,9 +90,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF1A1AB51AFF6C2200267156 /* Build configuration list for PBXNativeTarget "TouchVisualizer" */;
 			buildPhases = (
+				FF1A1A9C1AFF6C2200267156 /* Headers */,
 				FF1A1A9A1AFF6C2200267156 /* Sources */,
 				FF1A1A9B1AFF6C2200267156 /* Frameworks */,
-				FF1A1A9C1AFF6C2200267156 /* Headers */,
 				FF1A1A9D1AFF6C2200267156 /* Resources */,
 			);
 			buildRules = (
