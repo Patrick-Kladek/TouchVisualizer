@@ -180,7 +180,7 @@ extension Visualizer {
 extension Visualizer {
     public func warnIfSimulator() {
         #if targetEnvironment(simulator)
-            Logger.visualiser.warning("Warning: TouchRadius doesn't work on the simulator because it is not possible to read touch radius on it.")
+            Logger.visualiser.warning("Warning: TouchRadius is not available on Simulator")
         #endif
     }
     
