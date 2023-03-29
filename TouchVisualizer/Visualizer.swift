@@ -6,6 +6,7 @@
 import UIKit
 import os.log
 
+@objcMembers
 final public class Visualizer: NSObject {
     
     // MARK: - Public Variables
@@ -58,7 +59,12 @@ extension Visualizer {
     }
     
     // MARK: - Start and Stop functions
-    
+
+    @objc(startInWindow:)
+    public class func start(window: UIWindow) {
+        Self.start(in: window)
+    }
+
     public class func start(_ config: Configuration = Configuration(), in window: UIWindow) {
 		if config.showsLog {
             Logger.visualiser.info("Visualizer start...")
@@ -79,7 +85,7 @@ extension Visualizer {
             Logger.visualiser.info("Started!")
 		}
     }
-    
+
     public class func stop() {
         let instance = sharedInstance
         instance.enabled = false
