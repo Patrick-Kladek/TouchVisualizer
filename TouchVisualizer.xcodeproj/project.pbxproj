@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		909724841CFE16FB0017F85F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909724801CFE16FB0017F85F /* Configuration.swift */; };
-		909724851CFE16FB0017F85F /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909724811CFE16FB0017F85F /* TouchView.swift */; };
-		909724861CFE16FB0017F85F /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909724821CFE16FB0017F85F /* UIWindow+Swizzle.swift */; };
-		909724871CFE16FB0017F85F /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909724831CFE16FB0017F85F /* Visualizer.swift */; };
+		CD5FB2E92AC457BA001B9DCD /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5FB2E52AC457BA001B9DCD /* UIWindow+Swizzle.swift */; };
+		CD5FB2EA2AC457BA001B9DCD /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5FB2E62AC457BA001B9DCD /* Visualizer.swift */; };
+		CD5FB2EB2AC457BA001B9DCD /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5FB2E72AC457BA001B9DCD /* TouchView.swift */; };
+		CD5FB2EC2AC457BA001B9DCD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5FB2E82AC457BA001B9DCD /* Configuration.swift */; };
 		FF1A1AA51AFF6C2200267156 /* TouchVisualizer.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1A1AA41AFF6C2200267156 /* TouchVisualizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		909724801CFE16FB0017F85F /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		909724811CFE16FB0017F85F /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
-		909724821CFE16FB0017F85F /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
-		909724831CFE16FB0017F85F /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		CD5FB2E52AC457BA001B9DCD /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
+		CD5FB2E62AC457BA001B9DCD /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		CD5FB2E72AC457BA001B9DCD /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		CD5FB2E82AC457BA001B9DCD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FF1A1A9F1AFF6C2200267156 /* TouchVisualizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TouchVisualizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1A1AA31AFF6C2200267156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1A1AA41AFF6C2200267156 /* TouchVisualizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
@@ -35,6 +35,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD5FB2E32AC457BA001B9DCD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CD5FB2E42AC457BA001B9DCD /* TouchVisualizer */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		CD5FB2E42AC457BA001B9DCD /* TouchVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				CD5FB2E52AC457BA001B9DCD /* UIWindow+Swizzle.swift */,
+				CD5FB2E62AC457BA001B9DCD /* Visualizer.swift */,
+				CD5FB2E72AC457BA001B9DCD /* TouchView.swift */,
+				CD5FB2E82AC457BA001B9DCD /* Configuration.swift */,
+			);
+			path = TouchVisualizer;
+			sourceTree = "<group>";
+		};
 		FF1A1A951AFF6C2200267156 = {
 			isa = PBXGroup;
 			children = (
@@ -54,10 +73,7 @@
 		FF1A1AA11AFF6C2200267156 /* TouchVisualizer */ = {
 			isa = PBXGroup;
 			children = (
-				909724801CFE16FB0017F85F /* Configuration.swift */,
-				909724811CFE16FB0017F85F /* TouchView.swift */,
-				909724821CFE16FB0017F85F /* UIWindow+Swizzle.swift */,
-				909724831CFE16FB0017F85F /* Visualizer.swift */,
+				CD5FB2E32AC457BA001B9DCD /* Sources */,
 				FF1A1AA41AFF6C2200267156 /* TouchVisualizer.h */,
 				FF1A1AA21AFF6C2200267156 /* Supporting Files */,
 			);
@@ -154,10 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				909724861CFE16FB0017F85F /* UIWindow+Swizzle.swift in Sources */,
-				909724871CFE16FB0017F85F /* Visualizer.swift in Sources */,
-				909724851CFE16FB0017F85F /* TouchView.swift in Sources */,
-				909724841CFE16FB0017F85F /* Configuration.swift in Sources */,
+				CD5FB2E92AC457BA001B9DCD /* UIWindow+Swizzle.swift in Sources */,
+				CD5FB2EB2AC457BA001B9DCD /* TouchView.swift in Sources */,
+				CD5FB2EC2AC457BA001B9DCD /* Configuration.swift in Sources */,
+				CD5FB2EA2AC457BA001B9DCD /* Visualizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

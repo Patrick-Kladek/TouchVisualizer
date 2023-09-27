@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TouchVisualizer
 
 class ViewController: UITableViewController {
 
@@ -57,7 +58,7 @@ class ViewController: UITableViewController {
                     Visualizer.stop()
                     self.navigationItem.leftBarButtonItem?.isEnabled = false
                 } else {
-                    Visualizer.start()
+                    Visualizer.start(window: self.view.window!)
                     self.navigationItem.leftBarButtonItem?.isEnabled = true
                 }
             }
