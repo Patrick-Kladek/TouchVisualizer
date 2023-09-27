@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 molabo. All rights reserved.
 //
 
+import TouchVisualizer
 import UIKit
 
 final class ConfigViewController: UITableViewController {
@@ -30,7 +31,7 @@ final class ConfigViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Visualizer.start()
+        Visualizer.start(window: self.view.window!)
         updateCells()
     }
 
@@ -72,7 +73,7 @@ final class ConfigViewController: UITableViewController {
         }
 
         updateCells()
-        Visualizer.start(config)
+        Visualizer.start(config, in: self.view.window!)
     }
 
     func updateCells() {
@@ -106,8 +107,8 @@ final class ConfigViewController: UITableViewController {
     // MARK: - Actions
 
     @IBAction func cancelButtonTapped(sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-        Visualizer.start()
+        self.dismiss(animated: true, completion: nil)
+        Visualizer.start(in: self.view.window!)
     }
 
     @IBAction func doneButtonTapped(sender: UIBarButtonItem) {

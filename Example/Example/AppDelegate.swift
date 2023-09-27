@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TouchVisualizer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationDidFinishLaunching(_ application: UIApplication) {
 
 		// It's the simpest way!
-        Visualizer.start()
-		
+        Visualizer.start(window: self.window!)
+
         // Initialize with config - octocat
 //		var config = Configuration()
 //		config.color = UIColor.black
